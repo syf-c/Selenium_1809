@@ -1,0 +1,3 @@
+Odev-1
+
+automation exercise deki ilk soruyu JUnit ile çözünüz (https://www.automationexercise.com/test_cases)
