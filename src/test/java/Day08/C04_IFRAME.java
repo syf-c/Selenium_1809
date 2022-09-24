@@ -10,6 +10,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 
 public class C04_IFRAME {
 
@@ -34,8 +36,10 @@ public class C04_IFRAME {
     @Test
     public void test1(){
 driver.get("https://html.com/tags/iframe/");
-        WebElement youtubeframe=driver.findElement(By.xpath("//*[@src='https://www.youtube.com/embed/owsfdh4gxyc']"));
-        driver.switchTo().frame(youtubeframe);
+        List<WebElement>iframelist =new ArrayList<>(driver.findElements(By.xpath("//iframe")));
+        driver.switchTo().frame(iframelist.get(0));
+        driver.findElement(By.xpath("//*[@aria-label='Oynat']")).click();
+
 
 
     }
