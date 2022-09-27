@@ -14,6 +14,7 @@ import static org.junit.Assert.assertEquals;
 public class amazon extends TestBforeaAfter{
 
 
+
     @Test
     public void test1() throws InterruptedException {
     //     1. Amazon sayfasını acalım
@@ -37,6 +38,8 @@ public class amazon extends TestBforeaAfter{
 //        actions.moveToElement(emailkutusu).sendKeys("syf0140@hotmail.com" + Keys.ENTER).perform();
 
         driver.findElement(By.xpath("//input[@id='ap_email']")).sendKeys("syf0140@hotmail.com" + Keys.ENTER);
+
+        driver.findElement(By.xpath("//input[@id='ap_password']")).sendKeys("amazon123456"+Keys.ENTER);
 
 
     //     5. başarılı bir şekilde login oldugumuzu dogrulayalım.
